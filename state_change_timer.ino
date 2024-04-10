@@ -1,30 +1,32 @@
 #include <Servo.h>
-const int switchPin = 8;
+const int switchPin1 = 8;
 
-int switchVal = 0;
-int prevSwitchVal = 0;
+int switchVal1 = 0;
+int prevSwitchVal1 = 0;
 
-Servo myservo;
+Servo myservo1;
 //State Change 1
 void setup() {
   // put your setup code here, to run once:
-  pinMode(switchPin, INPUT);
-  myservo.attach(10);
-  myservo.write(0);
+  pinMode(switchPin1, INPUT);
+  myservo1.attach(10);
+  myservo1.write(0);
 
 }
 
 void loop() {
-  switchVal = digitalRead(switchPin);
+  switchVal1 = digitalRead(switchPin1);
 
-  if (switchVal != prevSwitchVal){
-    if (switchVal == HIGH){
-      myservo.write(180);
+  if (switchVal1 != prevSwitchVal1){
+    if (switchVal1 == HIGH){
+      myservo1.write(180);
     }
   }
 
-  prevSwitchVal = switchVal;
+  prevSwitchVal1 = switchVal1;
 }
+
+//State Change w/timer (sword in stone)
 const int switchPin = 8;
 unsigned long timerVal;
 unsigned long currentTime;
