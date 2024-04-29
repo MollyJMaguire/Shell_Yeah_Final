@@ -1,6 +1,10 @@
 #include <Servo.h>
+//BLACK - State Change 1(Sword Breaks 180)
+//WHITE - State Change 2 (Portrait 180)
+//GREEN - State Change 3 (Lady Lake 90)
+//YELLOW - State Change 4 (sword in stone 180)
 //SC1 :)
-  const int switchPin1 = 8;
+  const int switchPin1 = 12;   
   int switchVal1 = 0;
   int prevSwitchVal1 = 0;
   Servo myservo1;
@@ -9,25 +13,18 @@
   int switchVal2 = 0;
   int prevSwitchVal2 = 0;
   Servo myservo2;
+ 
 //SC3 >:(
-  const int switchPin3 = 12;
+  const int switchPin3 = 5;
   int switchVal3 = 0;
   int prevSwitchVal3 = 0;
   Servo myservo3;
-//SCT4 ;)
-  const int switchPin4 = 6;
+
+//ST4 ;)
+  const int switchPin4 = 2;
   int switchVal4 = 0;
   int prevSwitchVal4 = 0;
   Servo myservo4;
-  unsigned long timerVal;
-  unsigned long currentTime;
-  long timerLength = 3000;
-  bool timer = false;
-
-//State Change 1(Sword Breaks 180)
-//State Change 2 (Portrait 180)
-//State Change 3 (Lady Lake 90)
-//State Change w/timer 4 (sword in stone 180)
 void setup() {
 //SC1
   pinMode(switchPin1, INPUT);
