@@ -71,19 +71,11 @@ switchVal3 = digitalRead(switchPin3);
     }
   }
   prevSwitchVal3 = switchVal3;
-//SCT4
-  currentTime = millis();
+//ST4
   switchVal4 = digitalRead(switchPin4);
-  if (switchVal != prevSwitchVal){
-    if (switchVal == HIGH){
-      timerVal = currentTime;
-      timer = true;
+  if (switchVal4 != prevSwitchVal4){
+    if (switchVal4 == HIGH){
+      myservo4.write(180);
     }
   }
-  if (timer == true){
-    if (currentTime - timerVal >= timerLength){
-      myservo.write(180);
-    }
-  }
-  prevSwitchVal = switchVal;
 }
