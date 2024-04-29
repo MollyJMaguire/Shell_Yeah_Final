@@ -28,19 +28,19 @@
 void setup() {
 //SC1
   pinMode(switchPin1, INPUT);
-  myservo1.attach(10);
+  myservo1.attach(13);
   myservo1.write(0);
 //SC2
   pinMode(switchPin2, INPUT);
-  myservo2.attach(10);
+  myservo2.attach(9);
   myservo2.write(0);
 //SC3
   pinMode(switchPin3, INPUT);
-  myservo3.attach(10);
-  myservo3.write(0);
+  myservo3.attach(6);
+  myservo3.write(30);
 //SCT4
   pinMode(switchPin4, INPUT);
-  myservo4.attach(10);
+  myservo4.attach(3);
   myservo4.write(0);
 }
 
@@ -67,7 +67,7 @@ switchVal2 = digitalRead(switchPin2);
 switchVal3 = digitalRead(switchPin3);
   if (switchVal3 != prevSwitchVal3){
     if (switchVal3 == HIGH){
-      myservo3.write(90);
+      myservo3.write(130);
     }
   }
   prevSwitchVal3 = switchVal3;
